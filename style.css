@@ -1,0 +1,335 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/*tela de login*/
+
+body{
+    background: #023059;
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+width: 50vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.left-login > h1{
+    color: #04ADBF;
+    text-shadow: 0px 10px 20px black;
+}
+
+.left-login-image{
+    width: 30vw;
+}
+
+.right-login{
+    width:35vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-login{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #023E73;
+    box-shadow: 0px 10px 40px #00000050;
+    border-radius: 20px;
+}
+
+.card-login > h1{
+    margin: 0;
+    font-weight: 800;
+    color: #09cee4;
+    text-shadow: 0px 0px 20px #ffffff;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    position: relative;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    outline: none;
+    background: #025094;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 30px #00000050;
+}
+
+.textfield >input::placeholder{
+    color: #2d76b6;
+    font-weight:700 ;
+    
+}
+
+.textfield > label{
+    font-weight: 600;
+    color: azure;
+}
+
+
+.btn-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 50px;
+    margin: 25px;
+    border: none;
+    border-radius: 66px;
+    background-color: #09b4c7;
+    box-shadow: 0px 10px 50px rgb(36, 122, 122);
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-cadastrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-radius: 66px;
+    background-color: #4acedd;
+    box-shadow: 0px 10px 50px rgb(36, 122, 122);
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.link-pag-cadastro{
+    text-decoration: none;
+}
+
+nav.menu-lateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #162731;
+    padding: 25px 0 40px 0%;
+    flex-direction: column;
+    box-shadow: 3px 0 0 #09cee4;
+    transition: .2s;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: .3s;
+}
+
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 5px;
+}
+
+.btn-expandir > i{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu a{
+    transition: .2s; 
+}
+
+ul li.item-menu a:hover{
+    background: #09cee4;
+    border-radius: 3px;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: -50px;
+    line-height: 38px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+    flex-shrink: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+
+.btn-expandir-2{
+    padding-left: 10px;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.esqueceu-senha > a{
+    text-decoration: none;
+    color: #09cee4;
+    cursor: pointer;
+    font-size: small;
+    
+}
+
+.esqueceu-senha{
+    text-align: center;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.esqueceu-senha a:hover{
+    text-decoration: underline;
+
+}
+
+.olinho{
+    color: #ffffff;
+    position: absolute;
+    right: 15px;
+    top: 46%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: large;
+    
+}
+/* responsividade*/
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-image{
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu-lateral{
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .menu-lateral.expanded {
+        transform: translateX(0);
+    }
+
+    .btn-expandir > i {
+        display: none;
+    }
+}
+@media only screen and (max-width: 870px){
+    .left-login > h1{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .btn-expandir-2{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 622px){
+    .esqueceu-senha{
+        display: contents;
+    }
+    .olinho{
+       display: block; 
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .olinho{
+        top: 52%;
+    }
+}
+
+/*Tela de registro*/
